@@ -2,10 +2,8 @@ package myRsa
 
 import (
 	"crypto/rand"
-	"fmt"
 	"math/big"
 	"os"
-	"strconv"
 )
 
 type Key struct {
@@ -18,15 +16,7 @@ func generatePrimes(bits int) *big.Int {
 	return p
 }
 
-func EncryptingKeys() (public, private Key) {
-
-	bits := 1024
-	if len(os.Args) >= 2 {
-		bits, _ = strconv.Atoi(os.Args[1])
-		fmt.Println("Using key size:", bits)
-	} else {
-		fmt.Println("No size passed -> defaulting to 1024 bits")
-	}
+func EncryptingKeys(bits int) (public, private Key) {
 
 	p := generatePrimes(bits)
 	q := generatePrimes(bits)
