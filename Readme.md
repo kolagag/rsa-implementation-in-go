@@ -19,7 +19,7 @@ go run . 2048      # generates 2048-bit keys
 
 ### Whats Next
 
-- [ ] Add RSA Encryption & Decryption functions
+- [X] Add RSA Encryption & Decryption functions
 - [ ] Implement PKCS#1 v1.5 Padding
 - [ ] Build `Encrypt()` and `Decrypt()` APIs
 - [ ] Store & Load Keys securely (PEM / custom format)
